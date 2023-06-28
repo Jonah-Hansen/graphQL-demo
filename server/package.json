@@ -1,22 +1,17 @@
 {
-  "name": "server",
+  "name": "catstronauts-server-complete",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "back-end demo app for Apollo's lift-off course",
+  "main": "src/index.js",
   "scripts": {
-    "compile": "tsc",
-    "start": "npm run compile && node ./dist/index.js"
+    "start": "nodemon src/index"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
-  "dependencies": {
-    "@apollo/server": "^4.7.5",
-    "graphql": "^16.7.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@types/node": "^20.3.2",
-    "typescript": "^5.1.5"
-  }
+    "dotenv": "^8.6.0",
+    "nodemon": "^2.0.20"
+  },
+  "author": "Raphael Terrier @R4ph-t",
+  "license": "MIT",
+  "private": true
 }
