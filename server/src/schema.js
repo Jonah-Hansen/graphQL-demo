@@ -5,6 +5,8 @@ const typeDefs = gql`
 fields in Query are like the possible endpoints"""
 type Query {
   tracks: [Track!]!
+  "get a specific track by id"
+  track(id:ID!): Track
 }
 
 "a group of modules that teaches a certain topic"
@@ -15,6 +17,15 @@ type Track {
   thumbnail: String
   length: Int
   modulesCount: Int
+  description: String
+  numberOfViews: Int
+  modules: [Module!]!
+}
+
+type Module {
+  id: ID!
+  title: String!
+  length: Int
 }
 
 "author of a track"
