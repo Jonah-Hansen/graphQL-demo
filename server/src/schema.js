@@ -9,6 +9,17 @@ type Query {
   track(id:ID!): Track
 }
 
+type Mutation {
+  incrementTrackViews(id:ID!): IncrementTrackViewsResponse!
+}
+
+type IncrementTrackViewsResponse {
+  code:Int!
+  success:Boolean!
+  message:String!
+  track:Track
+}
+
 "a group of modules that teaches a certain topic"
 type Track {
   id: ID!
